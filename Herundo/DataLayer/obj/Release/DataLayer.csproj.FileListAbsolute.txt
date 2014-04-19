@@ -1,0 +1,9 @@
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\bin\Release\DataLayer.dll
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\bin\Release\DataLayer.pdb
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\bin\Release\MongoDB.Bson.dll
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\bin\Release\MongoDB.Driver.dll
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\bin\Release\MongoDB.Bson.xml
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\bin\Release\MongoDB.Driver.xml
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\obj\Release\DataLayer.csprojResolveAssemblyReference.cache
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\obj\Release\DataLayer.dll
+D:\Universitet\NoSQLwithMongo\NewHerundo\Herundo\DataLayer\obj\Release\DataLayer.pdb

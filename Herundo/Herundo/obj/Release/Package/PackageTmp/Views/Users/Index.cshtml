@@ -1,0 +1,50 @@
+﻿@model DataLayer.User
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of users</h2>
+<br />
+<p>
+    <span class="followedLegend">RED</span> - Followed users<br />
+    <span class="notFollowedLegend">GREEN</span> - Not followed users
+</p>
+@foreach (var user in ViewBag.AllUsers)
+{
+    bool flag = false;
+    if (Model.Following != null)
+    {
+        for (int i = 0; i < Model.Following.Count; i++)
+        {
+            if (Model.Following[i].Username.CompareTo(user.Username) == 0)
+            {
+                flag = true;
+                <div class="followed"><strong>@user.Username</strong></div>
+            }
+        }
+    }
+    if(!flag)
+    {
+        <div class ="notFollowed"><strong>@user.Username</strong></div>
+    }
+}
+
+
+
+@using (Html.BeginForm("Follow", "Users", FormMethod.Post)) {
+
+        <p class="FollowForm">
+        <strong>Follow user:</strong>
+        @Html.TextBox("username")
+        <input type="submit" value="Follow" />                    
+        </p>  
+}
+
+@using (Html.BeginForm("Unfollow", "Users", FormMethod.Post)) {
+
+        <p class="FollowForm">
+        <strong>Unfollow user:</strong>        
+        @Html.TextBox("username")    
+        <input type="submit" value="Unfollow" />        
+        </p>  
+}

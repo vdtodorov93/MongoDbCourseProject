@@ -1,0 +1,34 @@
+﻿@model DataLayer.Message
+
+@{
+    ViewBag.Title = "Timeline";
+}
+<a href="~/Message/Create" class="createMessage">Create message</a>
+<h2>Messages from your friends</h2>
+@if (ViewBag.LastMessages != null)
+{
+    foreach (var msg in ViewBag.LastMessages)
+    {
+        <p class="followMessage">
+            <div>
+                <strong>Posted by:</strong> <span class="metaInfo">@msg.Username</span>
+                 <strong>From:</strong> <span class="metaInfo">@msg.Location</span>
+            </div>
+            <div>
+                <strong>Date:</strong><span class="metaInfo">@msg.MessageDate</span>
+            </div>
+            <div>
+                <strong>Message: </strong><span class="topMessage">@msg.Content </span>
+            </div>
+        </p>
+    }
+}
+
+<script type="text/javascript">
+    refresh = function(){
+        setInterval(function () {
+            window.location.href = '/Message';
+        }, 30000);
+    }
+    refresh();
+</script>
